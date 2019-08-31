@@ -1,5 +1,7 @@
 # TSSHCommand
-Send commands over ssh with Delphi
+Send commands over ssh with Delphi. This is no implementation of ssh protocol in Delphi but a Wrapper to use ssh in a Delphi way. Since Openssh is a part of Windows 10, usage is easy without installing putty or something else.
+
+### Source code coming soon.... ;-)
 
 # Description
 TSSHCommand is a wrapper for Delphi to use built in openssh in Windows 10 to:
