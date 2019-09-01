@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7B23765E-BF50-4CDF-B0CC-E011FA0BB03D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SSHCommandDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\Test.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SCPDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SSHCommandDemo">
+        <MSBuild Projects="SSHCommandDemo.dproj"/>
+    </Target>
+    <Target Name="SSHCommandDemo:Clean">
+        <MSBuild Projects="SSHCommandDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SSHCommandDemo:Make">
+        <MSBuild Projects="SSHCommandDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Test">
+        <MSBuild Projects="Test\Test.dproj"/>
+    </Target>
+    <Target Name="Test:Clean">
+        <MSBuild Projects="Test\Test.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Test:Make">
+        <MSBuild Projects="Test\Test.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SCPDemo">
+        <MSBuild Projects="SCPDemo.dproj"/>
+    </Target>
+    <Target Name="SCPDemo:Clean">
+        <MSBuild Projects="SCPDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SCPDemo:Make">
+        <MSBuild Projects="SCPDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SSHCommandDemo;Test;SCPDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SSHCommandDemo:Clean;Test:Clean;SCPDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SSHCommandDemo:Make;Test:Make;SCPDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
