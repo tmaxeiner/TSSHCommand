@@ -25,6 +25,12 @@ Included is the wrapper as Delphi record, demo application and test.
 
 # Usage
 Evertything is visible in the demo application.
+After entering basic settings like:
+- hostname
+- port (if set other than 22)
+- username
+- keyfile
+you can perform as many commands and scp copy action with one line of code each.
 
 
 
