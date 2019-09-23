@@ -21,7 +21,7 @@ So my detour is to copy ssh.exe from Openssh folder to my application folder or 
 To use the scp function, same is for scp.exe.
 
 # Repo Contens 
-Included is the wrapper as Delphi record, demo application and test.
+Included is the wrapper as Delphi record (file SSHCommand.pas), demo application and test.
 
 # Usage
 Evertything is visible in the demo application.
@@ -32,6 +32,7 @@ After entering basic settings like:
 - keyfile
 you can perform as many commands and scp copy action with one line of code each.
 
+Attention: Before connecting with this wrapper, first make manuell connection e.g. with powershell to have a host entry in known_hosts!
 
 
 ''''
