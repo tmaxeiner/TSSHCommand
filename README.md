@@ -16,7 +16,7 @@ Command line options are compatible in Windows and Linux.
 
 # Prerequisites
 This wrapper uses shellexecute to start ssh.exe. Normally ssh is located in c:\windows\system32\Openssh\.
-I don't know why but shellexecute can't open the Openssh folder. If you start cmd.exe and navigate to c:\windows\system32\, you see no folder Openssh. Ich you use powershell, you see the folder and can enter it.
+I don't know why but shellexecute can't open the Openssh folder. If you start cmd.exe and navigate to c:\windows\system32\, you see no folder Openssh. If you use powershell, you see the folder and can enter it.
 So my detour is to copy ssh.exe from Openssh folder to my application folder or to a other folder e.g. c:\tools\
 To use the scp function, same is for scp.exe.
 
